@@ -64,19 +64,22 @@ https://s3.amazonaws.com/my-bucket-name/serverless-image-handler/my-version/serv
 ```
 ## Docker builds
 
-Build:
+* Build
+```
+docker build --build-arg BUCKET_NAME=$DIST_OUTPUT_BUCKET --build-arg VERSION=$VERSION-t serverless-image-handler:build .
+```
 
-  docker build --build-arg BUCKET_NAME=$DIST_OUTPUT_BUCKET --build-arg VERSION=$VERSION-t serverless-image-handler:build .
+* Get build artifacts from image
+```
+docker create --name serverless-image-handler-tmp serverless-image-handler:build
+docker cp serverless-image-handler-tmp:/build/serverless-image-handler/deployment/dist dist
+docker rm serverless-image-handler-tmp
+```
 
-Get build artifacts from image:
-
-  docker create --name serverless-image-handler-tmp serverless-image-handler:build
-  docker cp serverless-image-handler-tmp:/build/serverless-image-handler/deployment/dist dist
-  docker rm serverless-image-handler-tmp
-
-Cleanup:
-
-  docker rmi serverless-image-handler:build
+* Cleanup
+```
+docker rmi serverless-image-handler:build
+```
 
 ## SafeURL hash calculation
 * For hash calculation with safe URL, use following snippet to find signed_path value
