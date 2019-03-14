@@ -24,10 +24,13 @@ _Note:_ You would have to create 2 buckets, one named 'my-bucket-name' and anoth
 
 * OS/Python Environment Setup
 ```bash
-yum install yum-utils epel-release -y
+sudo amazon-linux-extras install epel
+sudo yum install yum-utils epel-release -y
 sudo yum-config-manager --enable epel
 sudo yum update -y
 sudo yum install zip wget git libpng-devel libcurl-devel gcc python-devel libjpeg-devel -y
+curl -O https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
 alias sudo='sudo env PATH=$PATH'
 sudo pip install setuptools==39.0.1
 sudo pip install virtualenv==15.2.0
