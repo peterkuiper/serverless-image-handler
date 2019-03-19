@@ -40,7 +40,7 @@ sudo pip install virtualenv==15.2.0
 ```
 * Clone the github repo
 ```bash
-git clone https://github.com/awslabs/serverless-image-handler.git
+git clone https://github.com/peterkuiper/serverless-image-handler.git
 ```
 
 * Navigate to the deployment folder
