@@ -69,7 +69,7 @@ https://s3.amazonaws.com/my-bucket-name/serverless-image-handler/my-version/serv
 
 * Build
 ```
-docker build --build-arg BUCKET_NAME=$DIST_OUTPUT_BUCKET --build-arg VERSION=$VERSION-t serverless-image-handler:build .
+docker build --build-arg BUCKET_NAME=$DIST_OUTPUT_BUCKET --build-arg VERSION=$VERSION -t serverless-image-handler:build .
 ```
 
 * Get build artifacts from image
