@@ -1,4 +1,4 @@
-FROM amazonlinux:2
+FROM amazonlinux:2017.03.1.20170812
 
 WORKDIR /build
 
@@ -6,7 +6,6 @@ ARG BUCKET_NAME
 ARG VERSION
 
 RUN \
-  amazon-linux-extras install epel && \
   yum -y install yum-utils epel-release && \
   yum-config-manager --enable epel && \
   yum -y update && \
