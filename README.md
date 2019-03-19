@@ -28,7 +28,6 @@ More information about the AWS Lambda execution environment can be found [here](
 
 * OS/Python Environment Setup
 ```bash
-sudo amazon-linux-extras install epel
 sudo yum install yum-utils epel-release -y
 sudo yum-config-manager --enable epel
 sudo yum update -y
