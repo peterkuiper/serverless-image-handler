@@ -22,6 +22,10 @@ export VERSION=my-version # version number for the customized code
 ```
 _Note:_ You would have to create 2 buckets, one named 'my-bucket-name' and another regional bucket named 'my-bucket-name-<aws_region>'; aws_region is where you are testing the customized solution. Also, the assets  in bucket should be publicly accessible.
 
+Use the following AMI: [amzn-ami-hvm-2017.03.1.20170812-x86_64-gp2](https://console.aws.amazon.com/ec2/v2/home#Images:visibility=public-images;search=amzn-ami-hvm-2017.03.1.20170812-x86_64-gp2)
+
+More information about the AWS Lambda execution environment can be found [here](https://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html).
+
 * OS/Python Environment Setup
 ```bash
 sudo amazon-linux-extras install epel
