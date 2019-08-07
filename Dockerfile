@@ -10,8 +10,6 @@ RUN \
   yum-config-manager --enable epel && \
   yum -y update && \
   yum -y install sudo which tar make file zip wget git libpng-devel libcurl-devel gcc python-devel libjpeg-devel && \
-  curl -O https://bootstrap.pypa.io/get-pip.py && \
-  python get-pip.py && \
   alias sudo='sudo env PATH=$PATH' && \
   sudo pip install setuptools==39.0.1 && \
   sudo pip install virtualenv==15.2.0 && \
