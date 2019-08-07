@@ -22,7 +22,7 @@ export VERSION=my-version # version number for the customized code
 ```
 _Note:_ You would have to create 2 buckets, one named 'my-bucket-name' and another regional bucket named 'my-bucket-name-<aws_region>'; aws_region is where you are testing the customized solution. Also, the assets  in bucket should be publicly accessible.
 
-Use the following AMI: [amzn-ami-hvm-2017.03.1.20170812-x86_64-gp2](https://console.aws.amazon.com/ec2/v2/home#Images:visibility=public-images;search=amzn-ami-hvm-2017.03.1.20170812-x86_64-gp2)
+Use the following AMI: [amzn-ami-hvm-2018.03.0.20181129-x86_64-gp2](https://console.aws.amazon.com/ec2/v2/home#Images:visibility=public-images;search=amzn-ami-hvm-2018.03.0.20181129-x86_64-gp2)
 
 More information about the AWS Lambda execution environment can be found [here](https://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html).
 
@@ -31,9 +31,7 @@ More information about the AWS Lambda execution environment can be found [here](
 sudo yum install yum-utils epel-release -y
 sudo yum-config-manager --enable epel
 sudo yum update -y
-sudo yum install zip wget git libpng-devel libcurl-devel gcc python-devel libjpeg-devel -y
-curl -O https://bootstrap.pypa.io/get-pip.py
-sudo python get-pip.py
+sudo yum install zip wget git libpng-devel libcurl-devel openssl-devel gcc python-devel libjpeg-devel -y
 alias sudo='sudo env PATH=$PATH'
 sudo pip install setuptools==39.0.1
 sudo pip install virtualenv==15.2.0
